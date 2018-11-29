@@ -1,4 +1,4 @@
-#Wildfly + Elastic APM POC
+# Wildfly + Elastic APM POC
 This repository contains a simple copy&paste fork of the Wildfly 9.0.2.FINAL HelloWorld Quickstart example
 with the addition of Elastic APM. It exists to easily reproduce an incompatibility bug between Wildfly,
 Elastic APM java agent, and the APM agent API.

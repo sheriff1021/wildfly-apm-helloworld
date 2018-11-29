@@ -1,3 +1,29 @@
+#Wildfly + Elastic APM POC
+This repository contains a simple copy&paste fork of the Wildfly 9.0.2.FINAL HelloWorld Quickstart example
+with the addition of Elastic APM. It exists to easily reproduce an incompatibility bug between Wildfly,
+Elastic APM java agent, and the APM agent API.
+
+To reproduce the bug, deploy into Wildfly 9.0.2.FINAL or newer with elastic agent configuration added
+to standalone.conf (replace wfly and agent paths):
+```
+#Add Elastic APM agent
+#JBOSS_MODULES_SYSTEM_PKGS="co.elastic.apm"
+JAVA_OPTS="$JAVA_OPTS -javaagent:<wfly_home>/bin/elastic-apm-agent-1.1.0.jar"
+JAVA_OPTS="$JAVA_OPTS -Delastic.apm.service_name=apm-poc"
+JAVA_OPTS="$JAVA_OPTS -Delastic.apm.server_url=http://localhost:8200"
+JAVA_OPTS="$JAVA_OPTS -Delastic.apm.application_packages=org.jboss.as.quickstarts.helloworld"
+JAVA_OPTS="$JAVA_OPTS -Delastic.apm.log_level=DEBUG"
+JAVA_OPTS="$JAVA_OPTS -Delastic.apm.enable_log_correlation=true"
+JAVA_OPTS="$JAVA_OPTS -Delastic.apm.log_file=<wfly_home>/standalone/log/apm.log"
+```
+Run with JDK8.
+
+Original Wildfly-Quickstart readme follows:
+
+---
+---
+---
+---
 helloworld: Helloworld Example
 ===============================
 Author: Pete Muir  

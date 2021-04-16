@@ -33,6 +33,18 @@
             <url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
         </license>
     </licenses>
+<distributionManagement>
+	<repository>
+		<id>deployment</id>
+		<name>Internal releases</name>
+		<url>http://localhost:8081/repository/my/</url>
+	</repository>	
+	<snapshotRepository>
+		<id>snapshots</id>
+		<name>snapshots</name>
+		<url>http://localhost:8081/repository/mysnap/</url>
+	</snapshotRepository>	
+    </distributionManagement>
 
     <properties>
         <!-- Explicitly declaring the source encoding eliminates the following

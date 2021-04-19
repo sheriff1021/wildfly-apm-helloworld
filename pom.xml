@@ -22,7 +22,7 @@
     <artifactId>wildfly-helloworld</artifactId>
     <version>9.0.0</version>
     <packaging>war</packaging>
-    <name>WildFly Quickstarts: Helloworld with APM</name>
+    <name>wildfly-helloworld</name>
     <description>WildFly Quickstarts: Helloworld with APM</description>
 
     <url>http://wildfly.org</url>

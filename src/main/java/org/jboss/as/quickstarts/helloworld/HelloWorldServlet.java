@@ -45,7 +45,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/HelloWorld")
 public class HelloWorldServlet extends HttpServlet {
 
-    static String PAGE_HEADER = "<html><head><title>hello buddy</title></head><body>";
+    static String PAGE_HEADER = "<html><head><title>hello BOB</title></head><body>";
 
     static String PAGE_FOOTER = "</body></html>";
 

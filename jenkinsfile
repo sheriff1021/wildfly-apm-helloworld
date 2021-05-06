@@ -1,0 +1,13 @@
+#!groovy
+pipeline{
+	stage("checkout"){
+		steps{
+			git ([url: 'https://github.com/sheriff1021/wildfly-apm-helloworld.git', branch: 'vova'])
+		}
+	}
+	stage("Build"){
+		steps{
+			sh "mvn build"
+		}	
+	}
+}
